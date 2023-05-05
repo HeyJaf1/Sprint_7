@@ -14,7 +14,7 @@ public class Order {
     public Order() {
     }
 
-    public Order (String[] color) {
+    public Order(String[] color) {
 
         this.firstName = "Иван";
         this.lastName = "Иванов";

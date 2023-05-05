@@ -25,12 +25,13 @@ public class LoginCourierTest {
 
     }
 
+
     @Test
     @Step("login with correct values")
     public void loginSuccessFullyTest() {
         ValidatableResponse responseLogin = step.login(credentials);
-        check.loginSuccess(responseLogin);
         id = responseLogin.extract().path("id");
+        check.loginSuccess(responseLogin);
     }
 
     @Test
@@ -67,6 +68,14 @@ public class LoginCourierTest {
     @After
     @Step("delete")
     public void deleteCourier() {
+        if (id != 0) {
+            step.deleteCourier(id);
+        }
+    }
+
+    @After
+    @Step("check")
+    public void checkCourier() {
         if (id != 0) {
             step.deleteCourier(id);
         }

@@ -13,10 +13,11 @@ public class CreateCourierTest {
     private CourierSteps step;
     private Courier courier;
     int id;
+
     @Before
     @Step("create objects")
     public void setUp() {
-        step =  new CourierSteps();
+        step = new CourierSteps();
         courier = generator.random();
         check = new CourierAssertions();
     }

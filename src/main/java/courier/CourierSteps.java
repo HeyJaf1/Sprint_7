@@ -12,6 +12,7 @@ public class CourierSteps {
     protected final String POST_CREATE_COURIER = "/api/v1/courier";
     protected final String POST_LOGIN_COURIER = "/api/v1/courier/login";
     protected final String DELETE_COURIER = "/api/v1/courier/";
+
     @Step("create new courier")
     public ValidatableResponse create(Courier courier) {
         return getSpec()
@@ -26,6 +27,7 @@ public class CourierSteps {
                 .contentType(ContentType.JSON)
                 .baseUri(BASE_URI);
     }
+
     @Step("login courier with login and password")
     public ValidatableResponse login(Credentials credentials) {
         return getSpec()

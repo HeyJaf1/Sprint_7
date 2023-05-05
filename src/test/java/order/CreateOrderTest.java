@@ -23,7 +23,7 @@ public class CreateOrderTest {
     @Before
     public void preconditions() {
         step = new OrderSteps();
-        check= new OrderAssertions();
+        check = new OrderAssertions();
     }
 
     @Parameterized.Parameters(name = "scooter's color")
@@ -35,6 +35,7 @@ public class CreateOrderTest {
                 {new String[]{}}
         };
     }
+
     @Test
     @Step("Create order with different colors")
     public void createTest() {
@@ -43,8 +44,9 @@ public class CreateOrderTest {
         check.checkBodyOrder(response);
         track = response.extract().path("track");
     }
+
     @After
-    public void deleteOrder(){
+    public void deleteOrder() {
         step.cancelOrder(track);
     }
 }
