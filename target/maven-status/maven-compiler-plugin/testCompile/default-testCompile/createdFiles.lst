@@ -1,0 +1,4 @@
+order\CreateOrderTest.class
+courier\CreateCourierTest.class
+courier\LoginCourierTest.class
+order\GetOrderTest.class

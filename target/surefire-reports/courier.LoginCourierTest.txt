@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: courier.LoginCourierTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.276 s <<< FAILURE! - in courier.LoginCourierTest
+loginWithNotCorrectLogin(courier.LoginCourierTest)  Time elapsed: 0.467 s  <<< ERROR!
+java.lang.NullPointerException
+	at courier.LoginCourierTest.loginWithNotCorrectLogin(LoginCourierTest.java:57)
+
